@@ -1,12 +1,12 @@
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
-from .views import SourceViewSet, ModificationViewSet, StrategyViewSet, ReportViewSet
+from .views import EmissionSourceViewSet, EmissionAdjustmentViewSet, EmissionStrategyViewSet, AnnualReportViewSet
 
 router = DefaultRouter()
-router.register(r'reports', ReportViewSet)
-router.register(r'sources', SourceViewSet)
-router.register(r'modifications', ModificationViewSet)
-router.register(r'strategies', StrategyViewSet)
+router.register(r'annual-reports', AnnualReportViewSet)
+router.register(r'emission-sources', EmissionSourceViewSet)
+router.register(r'emission-adjustments', EmissionAdjustmentViewSet)
+router.register(r'emission-strategies', EmissionStrategyViewSet)
 
 # urlpatterns = [
 #     path('', include(router.urls)),

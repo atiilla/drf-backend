@@ -1,19 +1,19 @@
 from rest_framework import viewsets
-from .models import Source, Modification, Strategy, Report
-from .serializers import SourceSerializer, ModificationSerializer, StrategySerializer, ReportSerializer
+from .models import EmissionSource, EmissionAdjustment, EmissionStrategy, AnnualReport
+from .serializers import EmissionSourceSerializer, EmissionAdjustmentSerializer, EmissionStrategySerializer, AnnualReportSerializer
 
-class ReportViewSet(viewsets.ModelViewSet):
-    queryset = Report.objects.all()
-    serializer_class = ReportSerializer
+class AnnualReportViewSet(viewsets.ModelViewSet):
+    queryset = AnnualReport.objects.all()
+    serializer_class = AnnualReportSerializer
 
-class SourceViewSet(viewsets.ModelViewSet):
-    queryset = Source.objects.all()
-    serializer_class = SourceSerializer
+class EmissionSourceViewSet(viewsets.ModelViewSet):
+    queryset = EmissionSource.objects.all()
+    serializer_class = EmissionSourceSerializer
 
-class ModificationViewSet(viewsets.ModelViewSet):
-    queryset = Modification.objects.all()
-    serializer_class = ModificationSerializer
+class EmissionAdjustmentViewSet(viewsets.ModelViewSet):
+    queryset = EmissionAdjustment.objects.all()
+    serializer_class = EmissionAdjustmentSerializer
 
-class StrategyViewSet(viewsets.ModelViewSet):
-    queryset = Strategy.objects.all()
-    serializer_class = StrategySerializer
+class EmissionStrategyViewSet(viewsets.ModelViewSet):
+    queryset = EmissionStrategy.objects.all()
+    serializer_class = EmissionStrategySerializer

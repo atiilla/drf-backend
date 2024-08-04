@@ -1,22 +1,22 @@
 from rest_framework import serializers
-from .models import Source, Modification, Strategy, Report
+from .models import EmissionSource, EmissionAdjustment, EmissionStrategy, AnnualReport
 
-class ReportSerializer(serializers.ModelSerializer):
+class AnnualReportSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Report
+        model = AnnualReport
         fields = '__all__'
 
-class SourceSerializer(serializers.ModelSerializer):
+class EmissionSourceSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Source
+        model = EmissionSource
         fields = '__all__'
 
-class ModificationSerializer(serializers.ModelSerializer):
+class EmissionAdjustmentSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Modification
+        model = EmissionAdjustment
         fields = '__all__'
 
-class StrategySerializer(serializers.ModelSerializer):
+class EmissionStrategySerializer(serializers.ModelSerializer):
     class Meta:
-        model = Strategy
+        model = EmissionStrategy
         fields = '__all__'

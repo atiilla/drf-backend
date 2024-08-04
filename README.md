@@ -1,7 +1,17 @@
+## Create migrations
+```
+python manage.py makemigrations
+```
+
+## Apply migrations
+```
+python manage.py migrate
+```
 
 ## Generate Dummy Data
+This command will generate dummy data for testing purposes.
 ```
-python manage.py generate_dummy_data
+python manage.py dummydata
 ```
 
 ## Run Server
